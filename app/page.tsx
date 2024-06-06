@@ -22,10 +22,6 @@ export default function Home() {
   const handleSubmit = async () => {
     await fetch("/api/messages", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
       body: JSON.stringify({ message }),
     });
 
