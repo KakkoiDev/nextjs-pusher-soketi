@@ -2,6 +2,8 @@
 
 Near realtime chat app using Pusher/Soketi.
 
+![demo](./demo.gif)
+
 ## Use with Pusher
 
 Create a pusher account and create a new app: https://dashboard.pusher.com/
