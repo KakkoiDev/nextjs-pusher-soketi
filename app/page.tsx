@@ -33,21 +33,30 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h1>Chat</h1>
-      <div>
-        <input
-          type="text"
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-        />
-        <button type="submit" onClick={handleSubmit}>
-          Send
-        </button>
+    <div className="flex flex-col gap-4 p-4">
+      <h1 className="text-5xl font-bold">Chat</h1>
+      <div className="flex flex-col">
+        <div className="flex gap-2">
+          <input
+            type="text"
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+            className="border-2 border-gray-300 rounded-md p-2"
+          />
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="bg-blue-500 text-white rounded-md py-2 px-4"
+          >
+            Send
+          </button>
+        </div>
       </div>
-      <ul>
+      <ul className="flex flex-col">
         {messages.map((message) => (
-          <li key={message}>{message}</li>
+          <li key={message} className="text-gray-700">
+            {message}
+          </li>
         ))}
       </ul>
     </div>
